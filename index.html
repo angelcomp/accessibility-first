@@ -68,6 +68,13 @@
             border-radius: 4px;
             margin-top: 10px;
         }
+        .resources {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #e7ffee;
+            border-radius: 5px;
+            border: 1px solid #69cc87;
+        }
     </style>
 </head>
 <body>
@@ -77,6 +84,7 @@
 </header>
 
 <div class="container">
+    <!-- Conteúdo anterior aqui -->
     <h2>Exemplo 1: Uso de <code>alt</code> em Imagens</h2>
     <div class="example">
         <p>O atributo <code>alt</code> fornece uma descrição da imagem para leitores de tela.</p>
@@ -85,7 +93,7 @@
     </div>
     <div class="practical-example">
         <p><strong>Exemplo Prático:</strong></p>
-        <img src="img.png" alt="Uma bela paisagem com montanhas e um lago">
+        <img src="imagem.jpg" alt="Uma bela paisagem com montanhas e um lago">
     </div>
     <p><strong>Dica:</strong> Sempre descreva a imagem de forma clara e concisa.</p>
 
@@ -93,11 +101,11 @@
     <div class="example">
         <p>O <code>aria-label</code> fornece informações adicionais sobre um elemento para leitores de tela.</p>
         <p><strong>Código:</strong></p>
-        <code>&lt;button aria-label="Fechar"&gt;X&lt;/button&gt;</code>
+        <code>&lt;button aria-label="Sair"&gt;Fechar&lt;/button&gt;</code>
     </div>
     <div class="practical-example">
         <p><strong>Exemplo Prático:</strong></p>
-        <button aria-label="Fechar">X</button>
+        <button aria-label="Sair">Fechar</button>
     </div>
     <p><strong>Dica:</strong> Use <code>aria-label</code> quando o texto do botão não for suficiente.</p>
 
@@ -264,6 +272,29 @@
         </table>
     </div>
     <p><strong>Dica:</strong> Use <code>&lt;caption&gt;</code> e <code>&lt;th&gt;</code> para descrever tabelas.</p>
+
+    <!-- Nova Seção de Recursos -->
+    <div class="resources">
+        <h2>Recursos e Dicas de Acessibilidade</h2>
+
+        <h3>1. Para Usuários com Deficiência</h3>
+        <ul>
+            <li><strong>Leitores de Tela:</strong> Software como NVDA e JAWS que lêem o conteúdo da tela para usuários com deficiência visual.</li>
+            <li><strong>Ampliadores de Tela:</strong> Ferramentas como ZoomText permitem que os usuários aumentem o conteúdo na tela.</li>
+            <li><strong>Teclados Acessíveis:</strong> Teclados com botões maiores ou layouts personalizáveis para facilitar a digitação.</li>
+            <li><strong>Softwares de Reconhecimento de Voz:</strong> Ferramentas como Dragon NaturallySpeaking ajudam usuários a controlar o computador por meio de comandos de voz.</li>
+            <li><strong>Extensões de Navegador:</strong> Ferramentas como Read Aloud (leitura em voz alta) e High Contrast (aumenta o contraste) podem ser muito úteis.</li>
+        </ul>
+
+        <h3>2. Para Programadores</h3>
+        <ul>
+            <li><strong>Diretrizes WCAG:</strong> As Diretrizes de Acessibilidade para Conteúdo da Web (WCAG) são um recurso essencial para garantir que seu site seja acessível.</li>
+            <li><strong>Ferramentas de Verificação de Acessibilidade:</strong> Utilize ferramentas como WAVE, Axe e Lighthouse para testar a acessibilidade do seu site.</li>
+            <li><strong>Documentação de Acessibilidade:</strong> Consulte a documentação do MDN (Mozilla Developer Network) sobre práticas recomendadas de acessibilidade.</li>
+            <li><strong>Frameworks Acessíveis:</strong> Considere usar frameworks como Bootstrap ou Foundation, que possuem diretrizes de acessibilidade integradas.</li>
+            <li><strong>Comunidade e Recursos Educacionais:</strong> Participe de fóruns e cursos online sobre acessibilidade para se manter atualizado sobre as melhores práticas.</li>
+        </ul>
+    </div>
 </div>
 
 </body>
