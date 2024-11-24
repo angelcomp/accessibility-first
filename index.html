@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade em Desenvolvimento Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .example {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        p {
+            margin: 0 0 10px;
+        }
+        .practical-example {
+            padding: 10px;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+            background-color: #e7f1ff;
+            margin-top: 10px;
+        }
+        .practical-example pre {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            overflow: auto;
+        }
+        .practical-example code {
+            background: none;
+            padding: 0;
+        }
+        .contrast-example {
+            color: white;
+            background-color: #007BFF; /* Azul */
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Acessibilidade em Desenvolvimento Web</h1>
+</header>
+
+<div class="container">
+    <h2>Exemplo 1: Uso de <code>alt</code> em Imagens</h2>
+    <div class="example">
+        <p>O atributo <code>alt</code> fornece uma descrição da imagem para leitores de tela.</p>
+        <p><strong>Código:</strong></p>
+        <code>&lt;img src="imagem.jpg" alt="Uma bela paisagem com montanhas e um lago"&gt;</code>
+    </div>
+    <div class="practical-example">
+        <p><strong>Exemplo Prático:</strong></p>
+        <img src="img.png" alt="Uma bela paisagem com montanhas e um lago">
+    </div>
+    <p><strong>Dica:</strong> Sempre descreva a imagem de forma clara e concisa.</p>
+
+    <h2>Exemplo 2: Uso de <code>aria-label</code></h2>
+    <div class="example">
+        <p>O <code>aria-label</code> fornece informações adicionais sobre um elemento para leitores de tela.</p>
+        <p><strong>Código:</strong></p>
+        <code>&lt;button aria-label="Fechar"&gt;X&lt;/button&gt;</code>
+    </div>
+    <div class="practical-example">
+        <p><strong>Exemplo Prático:</strong></p>
+        <button aria-label="Fechar">X</button>
+    </div>
+    <p><strong>Dica:</strong> Use <code>aria-label</code> quando o texto do botão não for suficiente.</p>
+
+    <h2>Exemplo 3: Estrutura Semântica com Múltiplos Elementos</h2>
+    <div class="example">
+        <p>Utilizar elementos semânticos ajuda na navegação e entendimento da estrutura da página.</p>
+        <p><strong>Código:</strong></p>
+        <code>
+            &lt;header&gt;<br>
+            &nbsp;&nbsp;&lt;h1&gt;Título da Página&lt;/h1&gt;<br>
+            &lt;/header&gt;<br>
+            &lt;nav&gt;<br>
+            &nbsp;&nbsp;&lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#section1"&gt;Seção 1&lt;/a&gt;&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#section2"&gt;Seção 2&lt;/a&gt;&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;/ul&gt;<br>
+            &lt;/nav&gt;<br>
+            &lt;main&gt;<br>
+            &nbsp;&nbsp;&lt;section id="section1"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Seção 1&lt;/h2&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Conteúdo da seção 1.&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;/section&gt;<br>
+            &nbsp;&nbsp;&lt;section id="section2"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Seção 2&lt;/h2&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Conteúdo da seção 2.&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;/section&gt;<br>
+            &lt;/main&gt;<br>
+            &lt;footer&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;Rodapé da página.&lt;/p&gt;<br>
+            &lt;/footer&gt;
+        </code>
+    </div>
+    <div class="practical-example">
+        <p><strong>Exemplo Prático:</strong></p>
+        <header>
+            <h1>Título da Página</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#section1">Seção 1</a></li>
+                <li><a href="#section2">Seção 2</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="section1">
+                <h2>Seção 1</h2>
+                <p>Conteúdo da seção 1.</p>
+            </section>
+            <section id="section2">
+                <h2>Seção 2</h2>
+                <p>Conteúdo da seção 2.</p>
+            </section>
+        </main>
+        <footer>
+            <p>Rodapé da página.</p>
+        </footer>
+    </div>
+    <p><strong>Dica:</strong> Use elementos semânticos para melhor estrutura do conteúdo.</p>
+
+    <h2>Exemplo 4: Teclado e Navegação</h2>
+    <div class="example">
+        <p>Certifique-se de que todos os elementos interativos possam ser acessados via teclado.</p>
+        <p><strong>Código:</strong></p>
+        <code>&lt;a href="#" tabindex="0"&gt;Link acessível&lt;/a&gt;</code>
+    </div>
+    <div class="practical-example">
+        <p><strong>Exemplo Prático:</strong></p>
+        <a href="#" tabindex="0">Link acessível</a>
+    </div>
+    <p><strong>Dica:</strong> Use o atributo <code>tabindex</code> para navegação por teclado.</p>
+
+    <h2>Exemplo 5: Rótulos em Formulários</h2>
+    <div class="example">
+        <p>Os rótulos em campos de formulários são essenciais para a acessibilidade.</p>
+        <p><strong>Código:</strong></p>
+        <code>
+            &lt;label for="nome"&gt;Nome:&lt;/label&gt;<br>
+            &lt;input type="text" id="nome" name="nome"&gt;
+        </code>
+    </div>
+    <div class="practical-example">
+        <p><strong>Exemplo Prático:</strong></p>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+    </div>
+    <p><strong>Dica:</strong> Sempre associe rótulos aos seus campos de entrada.</p>
+
+    <h2>Exemplo 6: Contraste de Cores</h2>
+    <div class="example">
+        <p>Um bom contraste entre texto e fundo é crucial para a legibilidade.</p>
+        <p><strong>Dica:</strong> Utilize ferramentas de verificação de contraste para garantir que suas combinações de cores atendam aos padrões de acessibilidade.</p>
+    </div>
+    <div class="practical-example">
+        <p><strong>Exemplo Prático:</strong></p>
+        <div class="contrast-example">
+            Este texto tem bom contraste com o fundo azul.
+        </div>
+        <p><strong>Exemplo de mau contraste:</strong></p>
+        <div style="color: red; background-color: #007BFF; padding: 10px;">
+            Este texto tem mau contraste (difícil de ler).
+        </div>
+    </div>
+
+    <h2>Exemplo 7: Títulos e Estrutura Hierárquica</h2>
+    <div class="example">
+        <p>Usar títulos de forma adequada cria uma estrutura hierárquica que facilita a navegação.</p>
+        <p><strong>Código:</strong></p>
+        <code>
+            &lt;h1&gt;Título Principal&lt;/h1&gt;<br>
+            &lt;h2&gt;Subtítulo&lt;/h2&gt;<br>
+            &lt;h3&gt;Título de Seção&lt;/h3&gt;<br>
+        </code>
+    </div>
+    <div class="practical-example">
+        <p><strong>Exemplo Prático:</strong></p>
+        <h1>Título Principal</h1>
+        <h2>Subtítulo</h2>
+        <h3>Título de Seção</h3>
+    </div>
+    <p><strong>Dica:</strong> Use títulos em ordem hierárquica para uma melhor navegação.</p>
+    
+    <h2>Exemplo 8: Uso de Tabelas</h2>
+    <div class="example">
+        <p>Fornecer descrições e cabeçalhos claros em tabelas é essencial para a compreensão.</p>
+        <p><strong>Código:</strong></p>
+        <code>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;caption&gt;Vendas Mensais&lt;/caption&gt;<br>
+            &nbsp;&nbsp;&lt;thead&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Mês&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Vendas&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/thead&gt;<br>
+            &nbsp;&nbsp;&lt;tbody&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Janeiro&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;R$ 1000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/tbody&gt;<br>
+            &lt;/table&gt;
+        </code>
+    </div>
+    <div class="practical-example">
+        <p><strong>Exemplo Prático:</strong></p>
+        <table>
+            <caption>Vendas Mensais</caption>
+            <thead>
+                <tr>
+                    <th>Mês</th>
+                    <th>Vendas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Janeiro</td>
+                    <td>R$ 1000</td>
+                </tr>
+                <tr>
+                    <td>Fevereiro</td>
+                    <td>R$ 1200</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><strong>Dica:</strong> Use <code>&lt;caption&gt;</code> e <code>&lt;th&gt;</code> para descrever tabelas.</p>
+</div>
+
+</body>
+</html>
